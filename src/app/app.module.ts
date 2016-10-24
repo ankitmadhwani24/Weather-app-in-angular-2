@@ -11,6 +11,8 @@ import { ContactComponentComponent } from './contact-component/contact-component
 //routings for app
 import { AppRoutings } from './header.routing';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { HomeComponent } from './home/home.component';
     HeaderComponentComponent,
     AboutComponentComponent,
     ContactComponentComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

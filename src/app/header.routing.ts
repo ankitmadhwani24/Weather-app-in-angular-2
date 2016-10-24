@@ -5,6 +5,8 @@ import { HeaderComponentComponent } from './header-component/header-component.co
 import { AboutComponentComponent } from './about-component/about-component.component';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes = [
     {
@@ -18,6 +20,14 @@ const appRoutes: Routes = [
     {
         path: 'contact',
         component: ContactComponentComponent
+    },
+    {
+        path: 'signup',
+        component: SignupComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     }
 ];
 
