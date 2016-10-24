@@ -1,21 +1,28 @@
 <section class="home-section">
 	<div class="container">
 		<div class="row">
-			<form class="col-sm-6 offset-sm-3 text-sm-left">
+			<form #signup = "ngForm" class="col-sm-6 offset-sm-3 text-sm-left" novalidate>
 				<div class="form-group">
 					<label for="exampleInputEmail1">Email address</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					<input type="email" class="form-control" name="name" [(ngModel)]="signup.email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
  				 </div>
 				 <div class="form-group">
 					<label for="user">User Name</label>
-					<input type="password" class="form-control" id="user" placeholder="User name">
+					<input type="email" class="form-control" id="user" placeholder="User name" name="username" [(ngModel)] = "signup.username">
  				 </div>
 				  <div class="form-group">
 					<label for="pass">Password</label>
-					<input type="password" class="form-control" id="pass" placeholder="Password">
+					<input type="password" class="form-control" id="pass" placeholder="Password" name="password" [(ngModel)] = "signup.password">
  				 </div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary" (click)="submit(signup.value, signup.valid)">Submit</button>
 			</form>
 		</div>
 	</div>
 </section>
+	<p>output json</p>
+	<div *ngIf="signup">
+		<div>Form details:-</div>
+		<pre>Is form valid?: <br>{{signup.valid | json}}</pre>
+		<pre>Is form submitted?: <br>{{signup.submitted | json}}</pre>
+		<pre>form value: <br>{{signup.value | json}}</pre>
+	</div>
