@@ -7,6 +7,7 @@ import { ContactComponentComponent } from './contact-component/contact-component
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { WheatherComponent } from './wheather/wheather.component';
 
 const appRoutes: Routes = [
     {
@@ -28,6 +29,10 @@ const appRoutes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'wheathercity',
+        component: WheatherComponent
     }
 ];
 

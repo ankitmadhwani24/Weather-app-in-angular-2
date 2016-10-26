@@ -13,6 +13,8 @@ import { AppRoutings } from './header.routing';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { WheatherComponent } from './wheather/wheather.component';
+import { CityListService } from './city-list.service';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { SignupComponent } from './signup/signup.component';
     ContactComponentComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    WheatherComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { SignupComponent } from './signup/signup.component';
     NgbModule,
     AppRoutings
   ],
-  providers: [],
+  providers: [CityListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
