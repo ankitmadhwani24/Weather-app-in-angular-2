@@ -4,14 +4,21 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class CityListService {
-
-  private cityData = 'city_list.json';
-  constructor(private http : Http) { }
-
-    getCityName() {
-     console.log(this.http.request('/app/city_list.json'));
-     
-    return this.http.request('/app/city_list.json')
-                 .map(res => res.json());
-  }
+    cityArray : Array<Object>;
+    constructor(private http: Http) {}
+        getCityName(): any {
+            // this.http.get('app/city_list.json')
+            //   .map(res => {
+            //      console.log(res.json())
+            //   });
+            //   .subscribe(data => {
+            //       console.log(data.json())
+            //     this.cityArray.push(data.json())
+            //   });
+             this.http.get('app/city_list.json')
+                .map(response => response.json())
+                  .subscribe(result => this.cityArray = result);
+                  console.log(this.cityArray);
+             return this.cityArray;
+        }
 }
