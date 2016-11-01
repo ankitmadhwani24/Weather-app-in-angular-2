@@ -1,24 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Http } from "@angular/http";
+import { Http, Response } from "@angular/http";
 import 'rxjs/add/operator/map'
+import { City } from './city';
+import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
 export class CityListService {
-    cityArray : Array<Object>;
+    cityArray = [];
     constructor(private http: Http) {}
-        getCityName(): any {
-            // this.http.get('app/city_list.json')
-            //   .map(res => {
-            //      console.log(res.json())
-            //   });
-            //   .subscribe(data => {
-            //       console.log(data.json())
-            //     this.cityArray.push(data.json())
-            //   });
-             this.http.get('app/city_list.json')
-                .map(response => response.json())
-                  .subscribe(result => this.cityArray = result);
-                  console.log(this.cityArray);
-             return this.cityArray;
-        }
+          getCityName (): Observable<City[]> {
+                return this.http.get('app/city_list.json')
+                                .map(this.extractData)
+                               
+          }
+          private extractData(res: Response) {
+              let body = res.json();
+              console.log(body);
+              return body;
+          }
 }

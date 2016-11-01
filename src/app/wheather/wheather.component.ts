@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CityListService } from '../city-list.service';
 import { Http } from '@angular/http';
+import { City } from '../city';
 
 @Component({
   selector: 'app-wheather',
@@ -8,15 +9,16 @@ import { Http } from '@angular/http';
   styleUrls: ['./wheather.component.css']
 })
 export class WheatherComponent implements OnInit {
+  cityNames: City[];
+  mode = 'Observable';
 
-  cityNames;
-  constructor(cityList: CityListService) {
-    this.cityNames = cityList.getCityName();
-        console.log(this.cityNames);
-        // console.log(this.cityNames[0]);
-
-  }
-
-  ngOnInit() {
+ constructor (private cityList: CityListService) {}
+  ngOnInit() { this.cityData(); }
+  cityData() {
+    this.cityList.getCityName()
+                     .subscribe(
+                       cityNames => this.cityNames = cityNames);
+    console.log(this.cityNames);
+    
   }
 }

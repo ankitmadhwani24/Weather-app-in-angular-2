@@ -1,4 +1,4 @@
-{"city":[
+[
     {"_id":707860,"name":"Hurzuf","country":"UA","coord":{"lon":34.283333,"lat":44.549999}},
     {"_id":519188,"name":"Novinki","country":"RU","coord":{"lon":37.666668,"lat":55.683334}},
     {"_id":1283378,"name":"Gorkhā","country":"NP","coord":{"lon":84.633331,"lat":28}},
@@ -14,4 +14,4 @@
     {"_id":384848,"name":"Qarah Gawl al ‘Ulyā","country":"IQ","coord":{"lon":45.6325,"lat":35.353889}},
     {"_id":569143,"name":"Cherkizovo","country":"RU","coord":{"lon":37.728889,"lat":55.800835}},
     {"_id":713514,"name":"Alupka","country":"UA","coord":{"lon":34.049999,"lat":44.416668}}
-]}
+]
