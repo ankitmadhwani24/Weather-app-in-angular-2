@@ -11,11 +11,10 @@ export class CityListService {
           getCityName (): Observable<City[]> {
                 return this.http.get('app/city_list.json')
                                 .map(this.extractData)
-                               
+
           }
           private extractData(res: Response) {
               let body = res.json();
-              console.log(body);
               return body;
           }
 }

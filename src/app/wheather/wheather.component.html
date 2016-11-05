@@ -1,20 +1,21 @@
 <section class="wheather">
 	<div class="container">
 		<div class="row">
-			<form class="col-sm-12 form-inline text-sm-center ng-untouched ng-pristine ng-valid">
+			<form #wheater="ngForm" class="col-sm-12 form-inline text-sm-center ng-untouched ng-pristine ng-valid">
 				<div class="form-group">
-					    <input list="browsers" name="browser" placeholder="start typing name">
-						 <datalist id="browsers">
-							 <option *ngFor = "let city of cityNames" value="{{city.name}}">
-							<!--<option value="Internet Explorer">
-							<option value="Firefox">
-							<option value="Chrome">
-							<option value="Opera">
-							<option value="Safari">-->
-						</datalist> 
+					    <input list="citylist" name="cityName" [(ngModel)]='cities' placeholder="start typing name">
+						<datalist id="citylist" name="ds">
+							 <option *ngFor = "let city of cityNames" value="{{city._id}}" id="{{city._id}}">
+						</datalist>
+						<!-- ng-options="city._id as city.name for city of cityNames" -->
  				 </div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary" (click)='save(wheater.value, wheater.valid)'>Submit</button>
 			</form>
 		</div>
 	</div>
+
+	<!-- <h2>OUTPUT</h2>
+	<div *ngIf="wheater">
+		<pre>form value: <br>{{wheater.value | json}}</pre>
+	</div> -->
 </section>
