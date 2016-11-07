@@ -20,16 +20,14 @@ export class WheatherComponent implements OnInit {
      this.cityData();
     //  for getting city id and send it to api
       this.cityDatas = {
-          id: ''
+          name: ''
       }
    }
   cityData() {
     this.cityList.getCityName()
                      .subscribe(cityNames => this.cityNames = cityNames);
   }
-  save(wheater: CityData, isValid: boolean) {
-      console.log("wheater component")
-    console.log(wheater);
-
+  save(f: CityData, isValid: boolean) {
+    this.cityList.getwheatherDetails(f.name);
   }
 }
