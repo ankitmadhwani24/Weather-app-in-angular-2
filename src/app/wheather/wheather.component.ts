@@ -3,6 +3,7 @@ import { CityListService } from '../city-list.service';
 import { Http } from '@angular/http';
 import { City } from '../city';
 import { CityData } from '../cityData';
+import { WheaterDetailsService } from '../wheater-details.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class WheatherComponent implements OnInit {
   public cityDatas : CityData;
   mode = 'Observable';
 
- constructor (private cityList: CityListService) {}
+ constructor (private cityList: CityListService, private wheather: WheaterDetailsService) {}
   ngOnInit() {
      this.cityData();
     //  for getting city id and send it to api
@@ -28,6 +29,6 @@ export class WheatherComponent implements OnInit {
                      .subscribe(cityNames => this.cityNames = cityNames);
   }
   save(f: CityData, isValid: boolean) {
-    this.cityList.getwheatherDetails(f.name);
+    this.wheather.getwheatherDetails(f.name);
   }
 }

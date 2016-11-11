@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { WheatherComponent } from './wheather/wheather.component';
 import { CityListService } from './city-list.service';
+import { WheaterDetailsService } from './wheater-details.service';
 
 
 @NgModule({
@@ -35,7 +36,10 @@ import { CityListService } from './city-list.service';
     NgbModule,
     AppRoutings
   ],
-  providers: [CityListService],
+  providers: [
+      CityListService,
+      WheaterDetailsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,30 +8,31 @@ import { Observable }     from 'rxjs/Observable';
 @Injectable()
 export class CityListService {
     //cityArray = [];
-    public wheatherReportURI:string;
+    private wheatherReportURI;
     constructor(private http: Http) {}
           getCityName (): Observable<City[]> {
                 return this.http.get('app/city_list.json')
                                 .map(this.extractData)
 
           }
-          getwheatherDetails (cityname): Observable<Data[]> {
-              console.log(cityname);
-              this.wheatherReportURI = "http://api.openweathermap.org/data/2.5/weather?q="+cityname+"&APPID=208cd455230db654437e20e84e8573df"
-              console.log(this.wheatherReportURI)
+         // getwheatherDetails (): Observable<Data[]> {
+              //console.log(cityname);
+            //   this.wheatherReportURI =
+             // console.log(this.wheatherReportURI)
 
-              return this.http.get(this.wheatherReportURI)
-                              .map(this.extractwheaterData)
+
+              //return this.http.get("http://api.openweathermap.org/data/2.5/weather?q="+cityname+"&APPID=208cd455230db654437e20e84e8573df")
+                             // .map(this.extractwheaterData)
                              // .catch(this.handleError);
-          }
+          //}
           private extractData(res: Response) {
               let body = res.json();
               return body;
           }
-          private extractwheaterData(res: Response) {
-              console.log("gtr");
-              let wBody = res.json();
-              console.log(wBody);
-          }
+        //   private extractwheaterData(res: Response) {
+        //       console.log("gtr");
+        //       let wBody = res.json();
+        //       console.log(wBody);
+        //   }
 
 }
