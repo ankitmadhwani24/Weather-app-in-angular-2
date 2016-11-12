@@ -21,6 +21,7 @@ export class WheaterDetailsService {
          //console.log("gtr");
          let wBody = res.json();
          console.log(wBody);
+        //  console.log(JSON.stringify(wBody))
          return wBody;
      }
      private handleError () {

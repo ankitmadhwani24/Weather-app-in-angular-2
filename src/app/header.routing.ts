@@ -8,11 +8,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { WheatherComponent } from './wheather/wheather.component';
+import { ShowWheatherComponent } from './show-wheather/show-wheather.component';
 
 const appRoutes: Routes = [
     {
         path: '',
-        component: HomeComponent 
+        component: HomeComponent
     },
     {
         path: 'about',
@@ -33,7 +34,11 @@ const appRoutes: Routes = [
     {
         path: 'wheathercity',
         component: WheatherComponent
+    },
+    {
+        path: 'showwheather',
+        component: ShowWheatherComponent
     }
 ];
 
-export const AppRoutings: ModuleWithProviders = RouterModule.forRoot(appRoutes); 
+export const AppRoutings: ModuleWithProviders = RouterModule.forRoot(appRoutes);

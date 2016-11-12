@@ -16,6 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { WheatherComponent } from './wheather/wheather.component';
 import { CityListService } from './city-list.service';
 import { WheaterDetailsService } from './wheater-details.service';
+import { ShowWheatherComponent } from './show-wheather/show-wheather.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { WheaterDetailsService } from './wheater-details.service';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    WheatherComponent
+    WheatherComponent,
+    ShowWheatherComponent
   ],
   imports: [
     BrowserModule,
