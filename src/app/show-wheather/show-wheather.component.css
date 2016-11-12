@@ -1,0 +1,49 @@
+.showing-wheater {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.details .status {
+    color: #00afbe;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+.details h2 span {
+    padding-left: 70px;
+    display: inline-block;
+    font-size: 44px;
+    font-style: italic;
+}
+.details span {
+    display: block;
+}
+.details small {
+    font-size: 16px;
+    padding-right: 10px;
+}
+.details img {
+    position: absolute;
+    right: 45px;
+    top: 55px;
+}
+
+.blink-image {
+    animation: blink normal 2s infinite ease-in-out
+}
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}

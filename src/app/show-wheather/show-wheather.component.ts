@@ -17,9 +17,7 @@ export class ShowWheatherComponent implements OnInit {
   }
 
   showFx() {
-      this.wheathershow.getwheatherDetails(d)
+      this.wheathershow.getwheatherDetails()
                         .subscribe(showCityWh => this.showCityWh = showCityWh);
-
-
   }
 }

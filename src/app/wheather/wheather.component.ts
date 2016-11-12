@@ -31,7 +31,8 @@ export class WheatherComponent implements OnInit {
   }
   save(f: CityData, isValid: boolean) {
     if(f.name != null && f.name != undefined) {
-        this.wheather.getwheatherDetails(f.name);
+        // this.wheather.getCityName(f.name);
+        localStorage.setItem('cityname', f.name)
         // var date  =  new Date();
         // console.log(date);
         this.router.navigate(['/showwheather']);

@@ -1,3 +1,21 @@
-<p>
-  show-wheather works!
-</p>
+<section class="showing-wheater">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="details overlay">
+                    <span class="status">Current</span>
+                    <h2>
+                        {{showCityWh?.name}}
+                        <span>{{showCityWh?.main.temp}} °C</span>
+                    </h2>
+                    <span>{{showCityWh?.weather[0].main}}</span>
+                    <small>{{showCityWh?.weather[0].description}}</small>
+                    <img src="http://openweathermap.org/img/w/{{showCityWh?.weather[0].icon}}.png" alt="" class="img-fluid blink-image" />
+                    <h3><small>MIN</small>{{showCityWh?.main.temp_min}} °C</h3>
+                    <h3><small>MAX</small>{{showCityWh?.main.temp_max}} °C</h3>
+                    <span>{{showCityWh?.wind.speed}}<small>m/s</small></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

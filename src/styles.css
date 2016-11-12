@@ -5,7 +5,8 @@ html,body {
 .about-section,
 .home-section,
 .contact-section,
-.wheather {
+.wheather,
+.showing-wheater {
     background-image: url('app/shared/images/1.jpg');
     height: 100%;
     background-position: center;
@@ -19,6 +20,9 @@ html,body {
 .wheather {
     background-image: url('app/shared/images/Weather.jpg');
      /*filter:blur(5px);*/
+}
+.showing-wheater {
+    background-image: url('app/shared/images/snow.jpg');
 }
 .about-section::before,
 .home-section::before,
