@@ -11,7 +11,7 @@ export class CityListService {
     private wheatherReportURI;
     constructor(private http: Http) {}
           getCityName (): Observable<City[]> {
-                return this.http.get('app/city_list.json')
+                return this.http.get('assets/city_list.json')
                                 .map(this.extractData)
 
           }
